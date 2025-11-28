@@ -10,7 +10,7 @@ const odds = [
   { team: 'Empate', odd: 8 },
 ];
 
-const betValues = [30, 50, 100];
+const betValues = [30, 50, 100, 250, 500];
 
 export default function Home() {
   return (
