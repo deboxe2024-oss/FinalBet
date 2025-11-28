@@ -11,7 +11,11 @@ const depositOptions = [
 
 export default function CheckoutPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen">
+       <div 
+        className="absolute inset-0 bg-cover bg-center z-[-1] opacity-20"
+        style={{ backgroundImage: "url('https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.6502074644319774.jpg')" }}
+      ></div>
       <Header />
       <main className="flex-1 w-full max-w-3xl mx-auto py-12 px-4">
         <div className="text-center mb-10">
