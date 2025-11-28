@@ -54,6 +54,12 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          strategy="afterInteractive"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+        />
       </head>
       <body className={cn("font-body antialiased min-h-screen flex flex-col")}>
         <Suspense>
