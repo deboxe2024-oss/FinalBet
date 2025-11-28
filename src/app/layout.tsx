@@ -40,6 +40,20 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="utmify-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.pixelId = "6929b3c7e309feafdf0f8765";
+              var a = document.createElement("script");
+              a.setAttribute("async", "");
+              a.setAttribute("defer", "");
+              a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+              document.head.appendChild(a);
+            `,
+          }}
+        />
       </head>
       <body className={cn("font-body antialiased min-h-screen flex flex-col")}>
         <Suspense>
