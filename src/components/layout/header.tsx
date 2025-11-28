@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { TicketCheck } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Header() {
 
@@ -9,7 +9,13 @@ export default function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <TicketCheck className="h-6 w-6 text-accent" />
+            <Image 
+                src="https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.9388482349431064.png" 
+                alt="FinalBet Logo" 
+                width={32} 
+                height={32}
+                className="h-8 w-8"
+            />
             <span className="font-bold font-headline text-lg">FinalBet</span>
           </Link>
         </div>
