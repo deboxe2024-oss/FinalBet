@@ -1,9 +1,12 @@
+'use client';
 import Header from '@/components/layout/header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { useFacebookPixel } from '@/hooks/use-facebook-pixel';
+import { useEffect } from 'react';
 
 const odds = [
   { team: 'Flamengo', odd: 10 },
@@ -14,6 +17,16 @@ const odds = [
 const betValues = [30, 50, 100, 250, 500];
 
 export default function Home() {
+  const fbPixel = useFacebookPixel();
+
+  useEffect(() => {
+    fbPixel.track('ViewContent');
+  }, [fbPixel]);
+
+  const handleInitiateCheckout = () => {
+    fbPixel.track('InitiateCheckout');
+  };
+
   const features = [
     "Transmissão estável e sem travamentos",
     "Disponível para todos os dispositivos (Smartphone, Smart TV, Tablet e PC)",
@@ -65,7 +78,7 @@ export default function Home() {
         </Card>
 
         <div className="text-center mb-12">
-          <Link href="/checkout">
+          <Link href="/checkout" onClick={handleInitiateCheckout}>
             <Button size="lg" className="h-14 text-xl font-bold animate-pulse">
               👉 Quero Fazer Minha Aposta
             </Button>

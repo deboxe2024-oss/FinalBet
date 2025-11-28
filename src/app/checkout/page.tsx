@@ -1,7 +1,9 @@
+'use client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/layout/header';
 import { Info } from 'lucide-react';
+import { useFacebookPixel } from '@/hooks/use-facebook-pixel';
 
 const depositOptions = [
   { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.06680268344196871.png', link: 'https://go.goatpayments.com.br/stwourbiwm' },
@@ -12,6 +14,15 @@ const depositOptions = [
 ];
 
 export default function CheckoutPage() {
+  const fbPixel = useFacebookPixel();
+
+  const handleAddToCart = (amount: number) => {
+    fbPixel.track('AddToCart', {
+      value: amount,
+      currency: 'BRL',
+    });
+  };
+
   return (
     <div className="relative flex flex-col min-h-screen">
        <div 
@@ -50,7 +61,7 @@ export default function CheckoutPage() {
                   {/* Future content can go here */}
                 </CardContent>
                 <CardFooter className="flex-col mt-auto p-4">
-                  <Button asChild className="w-full btn-accent font-bold text-sm">
+                  <Button asChild className="w-full btn-accent font-bold text-sm" onClick={() => handleAddToCart(option.amount)}>
                     <a href={option.link} target="_blank" rel="noopener noreferrer">Depositar agora</a>
                   </Button>
                 </CardFooter>
