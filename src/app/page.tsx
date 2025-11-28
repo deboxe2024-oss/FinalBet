@@ -35,7 +35,7 @@ export default function Home() {
             Bem-vindo à FinalBet
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plataforma nova e oficial da Super ODD de lançamento para a Final da Libertadores 2025! Aproveite a oferta exclusiva válida apenas para este jogo especial:
+            Plataforma nova e oficial da FinalBet com uma Super ODD de lançamento para a Final da Libertadores 2025! Aproveite a oferta exclusiva válida apenas para este jogo especial:
           </p>
         </div>
 
