@@ -1,41 +1,95 @@
-import { getEvents, seedDatabase } from '@/lib/db';
-import { Event } from '@/lib/types';
 import Header from '@/components/layout/header';
-import { EventCard } from '@/components/betting/event-card';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import Link from 'next/link';
 
-export default async function Home() {
-  await seedDatabase();
-  const events = await getEvents();
+const odds = [
+  { team: 'Flamengo', odd: 10 },
+  { team: 'Palmeiras', odd: 13 },
+  { team: 'Empate', odd: 8 },
+];
 
+const betValues = [30, 50, 100];
+
+export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex-1 w-full max-w-6xl mx-auto py-8 px-4">
+      <main className="flex-1 w-full max-w-4xl mx-auto py-12 px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-            Upcoming Events
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
+            Bem-vindo à FinalBet
           </h1>
-          <p className="text-lg text-muted-foreground mt-2">
-            Place your bets on the biggest matches.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Plataforma nova e oficial da Super OD de lançamento para a Final da Libertadores 2025! Aproveite a oferta exclusiva válida apenas para este jogo especial:
           </p>
         </div>
 
-        {events.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event: Event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <p className="text-muted-foreground">
-              No events available at the moment. Please check back later.
-            </p>
-          </div>
-        )}
+        <Card className="mb-12 shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-center text-2xl font-headline text-accent">🔥 Super Odds de Lançamento 🔥</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-lg">Time / Resultado</TableHead>
+                  <TableHead className="text-right text-lg">OD Lançamento</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {odds.map((item) => (
+                  <TableRow key={item.team}>
+                    <TableCell className="font-medium text-base">{item.team}</TableCell>
+                    <TableCell className="text-right font-bold text-base">{item.odd}x</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+            <p className="text-center text-muted-foreground mt-4">Aproveite enquanto está disponível!</p>
+          </CardContent>
+        </Card>
+
+        <div className="text-center mb-12">
+          <Link href="/checkout">
+            <Button size="lg" className="h-14 text-xl font-bold animate-pulse">
+              👉 Quero Fazer Minha Aposta
+            </Button>
+          </Link>
+        </div>
+        
+        <Card className="mb-12 shadow-lg">
+           <CardHeader>
+            <CardTitle className="text-center text-xl font-headline">Simulação de Retorno</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                    <TableHead>Valor da Aposta</TableHead>
+                    <TableHead>Flamengo (10x)</TableHead>
+                    <TableHead>Palmeiras (13x)</TableHead>
+                    <TableHead>Empate (8x)</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    {betValues.map(value => (
+                        <TableRow key={value}>
+                            <TableCell className="font-medium">R$ {value.toFixed(2)}</TableCell>
+                            <TableCell className="text-green-400 font-semibold">R$ {(value * 10).toFixed(2)}</TableCell>
+                            <TableCell className="text-green-400 font-semibold">R$ {(value * 13).toFixed(2)}</TableCell>
+                            <TableCell className="text-green-400 font-semibold">R$ {(value * 8).toFixed(2)}</TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+        
       </main>
       <footer className="w-full py-4 text-center text-xs text-muted-foreground">
-        Final Score © {new Date().getFullYear()}
+        FinalBet © {new Date().getFullYear()}
       </footer>
     </>
   );
