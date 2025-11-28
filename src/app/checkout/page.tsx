@@ -4,7 +4,7 @@ import Header from '@/components/layout/header';
 import { Info } from 'lucide-react';
 
 const depositOptions = [
-  { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://s2-oglobo.glbimg.com/-Wy7sfgQReP9OTJpqJ3w0EyX5U8=/0x0:1080x1350/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/l/d/UUWTfkRGCkZO6gXtsJEQ/g46f0j6weaavuiy.jfif' },
+  { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.06680268344196871.png' },
   { amount: 50, label: 'R$ 50,00', subtext: '', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Final_Libertadores_2025.jpg' },
   { amount: 100, label: 'R$ 100,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.19237929856447789.jpg' },
 ];
@@ -22,7 +22,7 @@ export default function CheckoutPage() {
             para liberar sua aposta exclusiva!
           </p>
           <p className="text-sm text-accent font-semibold mt-1">
-            Promoção válida apenas para novos usuários na Super OD de lançamento.
+            Promoção válida apenas para novos usuários na Super ODD de lançamento.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function CheckoutPage() {
             </CardHeader>
             <CardContent>
                 <p className="text-muted-foreground">
-                A conta para login será entregue automaticamente após o pagamento. Isso evita que usuários criem múltiplas contas para abusar da Super OD de lançamento. Após o depósito, você receberá seu acesso exclusivo para acompanhar seus palpites, histórico e retornos.
+                A conta para login será entregue automaticamente após o pagamento. Isso evita que usuários criem múltiplas contas para abusar da Super ODD de lançamento. Após o depósito, você receberá seu acesso exclusivo para acompanhar seus palpites, histórico e retornos.
                 </p>
             </CardContent>
         </Card>
