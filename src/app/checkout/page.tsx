@@ -4,11 +4,11 @@ import Header from '@/components/layout/header';
 import { Info } from 'lucide-react';
 
 const depositOptions = [
-  { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.06680268344196871.png' },
-  { amount: 50, label: 'R$ 50,00', subtext: '', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Final_Libertadores_2025.jpg' },
-  { amount: 100, label: 'R$ 100,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.19237929856447789.jpg' },
-  { amount: 250, label: 'R$ 250,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.8179536089969042.webp' },
-  { amount: 500, label: 'R$ 500,00', subtext: '', imageUrl: 'https://www.moneytimes.com.br/uploads/2025/11/final-da-libertadores-2025-entre-flamengo-x-palmeiras-imagem-gerada-por-ia-2.jpg' },
+  { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.06680268344196871.png', link: 'https://go.goatpayments.com.br/stwourbiwm' },
+  { amount: 50, label: 'R$ 50,00', subtext: '', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Final_Libertadores_2025.jpg', link: 'https://go.goatpayments.com.br/ou0og' },
+  { amount: 100, label: 'R$ 100,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.19237929856447789.jpg', link: 'https://go.goatpayments.com.br/tmqny' },
+  { amount: 250, label: 'R$ 250,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.8179536089969042.webp', link: 'https://go.goatpayments.com.br/zdow4' },
+  { amount: 500, label: 'R$ 500,00', subtext: '', imageUrl: 'https://www.moneytimes.com.br/uploads/2025/11/final-da-libertadores-2025-entre-flamengo-x-palmeiras-imagem-gerada-por-ia-2.jpg', link: 'https://go.goatpayments.com.br/khjyv' },
 ];
 
 export default function CheckoutPage() {
@@ -51,7 +51,7 @@ export default function CheckoutPage() {
                 </CardContent>
                 <CardFooter className="flex-col mt-auto p-4">
                   <Button asChild className="w-full btn-accent font-bold text-sm">
-                    <a href="#">Depositar agora</a>
+                    <a href={option.link} target="_blank" rel="noopener noreferrer">Depositar agora</a>
                   </Button>
                 </CardFooter>
               </div>
