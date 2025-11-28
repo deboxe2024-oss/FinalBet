@@ -19,7 +19,7 @@ export default function Home() {
     "Disponível para todos os dispositivos (Smartphone, Smart TV, Tablet e PC)",
     "Acesso 100% liberado após o depósito",
     "Sem interrupções durante a partida",
-    "Qualidade HD e alta estabilidade",
+    "Qualidade 4K Suportando ate 10k e alta estabilidade",
   ];
 
   return (
