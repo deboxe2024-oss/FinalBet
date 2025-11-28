@@ -32,7 +32,7 @@ export default function Home() {
 
         <Card className="mb-12 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-center text-2xl font-headline text-accent">🔥 Super Odds de Lançamento 🔥</CardTitle>
+            <CardTitle className="text-center text-2xl font-headline text-accent">🔥 Super ODDs de Lançamento 🔥</CardTitle>
           </CardHeader>
           <CardContent>
             <Table>
@@ -63,32 +63,38 @@ export default function Home() {
           </Link>
         </div>
         
-        <Card className="mb-12 shadow-lg">
-           <CardHeader>
-            <CardTitle className="text-center text-xl font-headline">Simulação de Retorno</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Table>
-                <TableHeader>
-                    <TableRow>
-                    <TableHead>Valor da Aposta</TableHead>
-                    <TableHead>Flamengo (10x)</TableHead>
-                    <TableHead>Palmeiras (13x)</TableHead>
-                    <TableHead>Empate (8x)</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {betValues.map(value => (
-                        <TableRow key={value}>
-                            <TableCell className="font-medium">R$ {value.toFixed(2)}</TableCell>
-                            <TableCell className="text-green-400 font-semibold">R$ {(value * 10).toFixed(2)}</TableCell>
-                            <TableCell className="text-green-400 font-semibold">R$ {(value * 13).toFixed(2)}</TableCell>
-                            <TableCell className="text-green-400 font-semibold">R$ {(value * 8).toFixed(2)}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-          </CardContent>
+        <Card className="mb-12 shadow-lg relative overflow-hidden">
+            <div 
+                className="absolute inset-0 bg-cover bg-center z-0 opacity-10"
+                style={{ backgroundImage: "url('https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.6502074644319774.jpg')" }}
+            ></div>
+            <div className="relative z-10">
+                <CardHeader>
+                    <CardTitle className="text-center text-xl font-headline">Simulação de Retorno</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <Table>
+                        <TableHeader>
+                            <TableRow>
+                            <TableHead>Valor da Aposta</TableHead>
+                            <TableHead>Flamengo (10x)</TableHead>
+                            <TableHead>Palmeiras (13x)</TableHead>
+                            <TableHead>Empate (8x)</TableHead>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {betValues.map(value => (
+                                <TableRow key={value}>
+                                    <TableCell className="font-medium">R$ {value.toFixed(2)}</TableCell>
+                                    <TableCell className="text-green-400 font-semibold">R$ {(value * 10).toFixed(2)}</TableCell>
+                                    <TableCell className="text-green-400 font-semibold">R$ {(value * 13).toFixed(2)}</TableCell>
+                                    <TableCell className="text-green-400 font-semibold">R$ {(value * 8).toFixed(2)}</TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </CardContent>
+            </div>
         </Card>
         
       </main>
