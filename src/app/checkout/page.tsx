@@ -7,6 +7,8 @@ const depositOptions = [
   { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.06680268344196871.png' },
   { amount: 50, label: 'R$ 50,00', subtext: '', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Final_Libertadores_2025.jpg' },
   { amount: 100, label: 'R$ 100,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.19237929856447789.jpg' },
+  { amount: 250, label: 'R$ 250,00', subtext: '', imageUrl: 'https://www.umdoisesportes.com.br/thumbor/CjiWBzbzdWVXFggOUUmPlFsrqZ4=/1000x562/smart/filters:format(webp)/https://ude-hermes-media-prd.s3.gra.io.cloud.ovh.net/media/umdoisesportes/2025/11/25142802/palmeiras-flamengo-final-libertadores-2025-lima-1.jpg' },
+  { amount: 500, label: 'R$ 500,00', subtext: '', imageUrl: 'https://www.moneytimes.com.br/uploads/2025/11/final-da-libertadores-2025-entre-flamengo-x-palmeiras-imagem-gerada-por-ia-2.jpg' },
 ];
 
 export default function CheckoutPage() {
@@ -17,7 +19,7 @@ export default function CheckoutPage() {
         style={{ backgroundImage: "url('https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.6502074644319774.jpg')" }}
       ></div>
       <Header />
-      <main className="flex-1 w-full max-w-3xl mx-auto py-12 px-4">
+      <main className="flex-1 w-full max-w-5xl mx-auto py-12 px-4">
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-headline font-bold text-primary">
             Escolha o valor do seu depósito
@@ -30,9 +32,9 @@ export default function CheckoutPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
           {depositOptions.map((option) => (
-            <Card key={option.amount} className="relative flex flex-col text-center shadow-lg hover:border-accent transition-all overflow-hidden group">
+            <Card key={option.amount} className="relative flex flex-col text-center shadow-lg hover:border-accent transition-all overflow-hidden group h-64">
               <div
                 className="absolute inset-0 bg-cover bg-center z-0 transform transition-transform duration-300 group-hover:scale-110"
                 style={{ backgroundImage: `url(${option.imageUrl})` }}
@@ -41,14 +43,14 @@ export default function CheckoutPage() {
               </div>
               <div className="relative z-10 flex flex-col flex-grow">
                 <CardHeader>
-                  <CardTitle className="text-4xl font-bold text-white">{option.label}</CardTitle>
-                  {option.subtext && <CardDescription className="text-gray-300">{option.subtext}</CardDescription>}
+                  <CardTitle className="text-2xl lg:text-3xl font-bold text-white">{option.label}</CardTitle>
+                  {option.subtext && <CardDescription className="text-gray-300 text-xs">{option.subtext}</CardDescription>}
                 </CardHeader>
                 <CardContent className="flex-grow flex items-center justify-center">
                   {/* Future content can go here */}
                 </CardContent>
-                <CardFooter className="flex-col">
-                  <Button asChild className="w-full btn-accent font-bold">
+                <CardFooter className="flex-col mt-auto p-4">
+                  <Button asChild className="w-full btn-accent font-bold text-sm">
                     <a href="#">Depositar agora</a>
                   </Button>
                 </CardFooter>

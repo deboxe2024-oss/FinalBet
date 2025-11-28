@@ -40,6 +40,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'nwuievvpcjrmecujwfox.supabase.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.umdoisesportes.com.br',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.moneytimes.com.br',
+      },
     ],
   },
 };
