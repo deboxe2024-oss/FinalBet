@@ -11,12 +11,12 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Image 
                 src="https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.9388482349431064.png" 
-                alt="FinalBet Logo" 
+                alt="FinalClub Logo" 
                 width={32} 
                 height={32}
                 className="h-8 w-8"
             />
-            <span className="font-bold font-headline text-lg">FinalBet</span>
+            <span className="font-bold font-headline text-lg">FinalClub</span>
           </Link>
         </div>
       </div>

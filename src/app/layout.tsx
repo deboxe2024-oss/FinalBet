@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Final Score',
+  title: 'FinalClub',
   description: 'A modern sports betting application.',
 };
 

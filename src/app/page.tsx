@@ -32,23 +32,23 @@ export default function Home() {
       <main className="flex-1 w-full max-w-4xl mx-auto py-12 px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
-            Bem-vindo à FinalBet
+            Bem-vindo à FinalClub
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plataforma nova e oficial da FinalBet com uma Super ODD de lançamento para a Final da Libertadores 2025! Aproveite a oferta exclusiva válida apenas para este jogo especial:
+            Plataforma nova e oficial da FinalClub com uma Super Oferta Especial de Lançamento para a Final da Libertadores 2025! Aproveite a oferta exclusiva válida apenas para este jogo especial:
           </p>
         </div>
 
         <Card className="mb-12 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-center text-2xl font-headline text-accent">🔥 Super ODDs de Lançamento 🔥</CardTitle>
+            <CardTitle className="text-center text-2xl font-headline text-accent">🔥 Super Oferta Especial de Lançamento 🔥</CardTitle>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead className="text-lg">Time / Resultado</TableHead>
-                  <TableHead className="text-right text-lg">ODD Lançamento</TableHead>
+                  <TableHead className="text-right text-lg">Oferta Especial de Lançamento</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -110,7 +110,7 @@ export default function Home() {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-headline text-accent">Acesso ao Jogo Ao Vivo — Exclusivo Para Apostadores</CardTitle>
             <p className="text-muted-foreground pt-2 max-w-3xl mx-auto">
-              Todos os usuários que realizarem sua aposta na FinalBet recebem acesso prioritário e exclusivo à transmissão oficial da Final da Libertadores, através de nossos provedores autorizados.
+              Todos os usuários que realizarem sua aposta na FinalClub recebem acesso prioritário e exclusivo à transmissão oficial da Final da Libertadores, através de nossos provedores autorizados.
             </p>
           </CardHeader>
           <CardContent>
@@ -130,7 +130,7 @@ export default function Home() {
         
       </main>
       <footer className="w-full py-4 text-center text-xs text-muted-foreground">
-        FinalBet © {new Date().getFullYear()}
+        FinalClub © {new Date().getFullYear()}
       </footer>
     </div>
   );

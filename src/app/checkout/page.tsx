@@ -28,7 +28,7 @@ export default function CheckoutPage() {
             para liberar sua aposta exclusiva!
           </p>
           <p className="text-sm text-accent font-semibold mt-1">
-            Promoção válida apenas para novos usuários na Super ODD de lançamento.
+            Promoção válida apenas para novos usuários na Super Oferta Especial de Lançamento.
           </p>
         </div>
 
@@ -66,14 +66,14 @@ export default function CheckoutPage() {
             </CardHeader>
             <CardContent>
                 <p className="text-muted-foreground">
-                A conta para login será entregue automaticamente após o pagamento. Isso evita que usuários criem múltiplas contas para abusar da Super ODD de lançamento. Após o depósito, você receberá seu acesso exclusivo para acompanhar seus palpites, histórico e retornos.
+                A conta para login será entregue automaticamente após o pagamento. Isso evita que usuários criem múltiplas contas para abusar da Super Oferta Especial de Lançamento. Após o depósito, você receberá seu acesso exclusivo para acompanhar seus palpites, histórico e retornos.
                 </p>
             </CardContent>
         </Card>
 
       </main>
       <footer className="w-full py-4 text-center text-xs text-muted-foreground">
-        FinalBet © {new Date().getFullYear()}
+        FinalClub © {new Date().getFullYear()}
       </footer>
     </div>
   );
