@@ -7,7 +7,7 @@ const depositOptions = [
   { amount: 30, label: 'R$ 30,00', subtext: '(mínimo)', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.06680268344196871.png' },
   { amount: 50, label: 'R$ 50,00', subtext: '', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Final_Libertadores_2025.jpg' },
   { amount: 100, label: 'R$ 100,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.19237929856447789.jpg' },
-  { amount: 250, label: 'R$ 250,00', subtext: '', imageUrl: 'https://www.umdoisesportes.com.br/thumbor/CjiWBzbzdWVXFggOUUmPlFsrqZ4=/1000x562/smart/filters:format(webp)/https://ude-hermes-media-prd.s3.gra.io.cloud.ovh.net/media/umdoisesportes/2025/11/25142802/palmeiras-flamengo-final-libertadores-2025-lima-1.jpg' },
+  { amount: 250, label: 'R$ 250,00', subtext: '', imageUrl: 'https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.8179536089969042.webp' },
   { amount: 500, label: 'R$ 500,00', subtext: '', imageUrl: 'https://www.moneytimes.com.br/uploads/2025/11/final-da-libertadores-2025-entre-flamengo-x-palmeiras-imagem-gerada-por-ia-2.jpg' },
 ];
 
