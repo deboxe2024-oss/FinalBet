@@ -14,7 +14,11 @@ const betValues = [30, 50, 100];
 
 export default function Home() {
   return (
-    <>
+    <div className="relative min-h-screen">
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-[-1] opacity-20"
+        style={{ backgroundImage: "url('https://nwuievvpcjrmecujwfox.supabase.co/storage/v1/object/public/media/0.6502074644319774.jpg')" }}
+      ></div>
       <Header />
       <main className="flex-1 w-full max-w-4xl mx-auto py-12 px-4">
         <div className="text-center mb-12">
@@ -91,6 +95,6 @@ export default function Home() {
       <footer className="w-full py-4 text-center text-xs text-muted-foreground">
         FinalBet © {new Date().getFullYear()}
       </footer>
-    </>
+    </div>
   );
 }
